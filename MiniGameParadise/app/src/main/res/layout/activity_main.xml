@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ani_all"
+    android:background="@drawable/ani_all2"
     tools:context=".MainActivity">
 
 
@@ -15,7 +15,7 @@
         android:text="Mini\nGame\nParadise"
         android:textStyle="bold"
         android:textSize="70dp"
-        android:textColor="#404040"
+        android:textColor="#504C4C"
         android:gravity="center"
         app:layout_constraintBottom_toTopOf="@id/selectbnt"
         app:layout_constraintEnd_toEndOf="parent"
