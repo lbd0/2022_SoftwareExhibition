@@ -25,6 +25,12 @@
 
         <activity android:name=".CharacterChoice"></activity>
         <activity android:name=".GameChoice"></activity>
+        <activity android:name=".baseballGame"></activity>
+        <activity android:name=".cardGame"></activity>
+        <activity android:name=".moleGame"></activity>
+        <activity android:name=".randomGame"></activity>
+        <activity android:name=".updownGame"></activity>
+
     </application>
 
 </manifest>
