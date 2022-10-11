@@ -45,63 +45,63 @@
                 android:id="@+id/ani_rat"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:src="@drawable/ani_rock_rat"/>
+                android:src="@drawable/ani_lock_rat"/>
 
             <ImageView
                 android:id="@+id/ani_cow"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:src="@drawable/ani_rock_cow"/>
+                android:src="@drawable/ani_lock_cow"/>
             <ImageView
                 android:id="@+id/ani_tiger"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:src="@drawable/ani_rock_tiger"/>
+                android:src="@drawable/ani_lock_tiger"/>
             <ImageView
                 android:id="@+id/ani_rabbit"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:src="@drawable/ani_rock_rabbit"/>
+                android:src="@drawable/ani_lock_rabbit"/>
             <ImageView
                 android:id="@+id/ani_drag"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:src="@drawable/ani_rock_drag"/>
+                android:src="@drawable/ani_lock_drag"/>
             <ImageView
                 android:id="@+id/ani_sna"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:src="@drawable/ani_rock_sna"/>
+                android:src="@drawable/ani_lock_sna"/>
             <ImageView
                 android:id="@+id/ani_hor"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:src="@drawable/ani_rock_hor"/>
+                android:src="@drawable/ani_lock_hor"/>
             <ImageView
                 android:id="@+id/ani_sheep"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:src="@drawable/ani_rock_sheep"/>
+                android:src="@drawable/ani_lock_sheep"/>
             <ImageView
                 android:id="@+id/ani_mon"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:src="@drawable/ani_rock_mon"/>
+                android:src="@drawable/ani_lock_mon"/>
             <ImageView
                 android:id="@+id/ani_chi"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:src="@drawable/ani_rock_chi"/>
+                android:src="@drawable/ani_lock_chi"/>
             <ImageView
                 android:id="@+id/ani_dog"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:src="@drawable/ani_rock_dog"/>
+                android:src="@drawable/ani_lock_dog"/>
             <ImageView
                 android:id="@+id/ani_pig"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:src="@drawable/ani_rock_pig"/>
+                android:src="@drawable/ani_lock_pig"/>
 
         </LinearLayout>
     </HorizontalScrollView>

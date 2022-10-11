@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class CharacterChoice : AppCompatActivity() {
@@ -31,20 +32,62 @@ class CharacterChoice : AppCompatActivity() {
             img_view[i] = findViewById<ImageView>(img_ID[i]) // 각 이미지뷰에 아이디 넣어주기
 
             img_view[i].setOnClickListener { // 각 이미지뷰 클릭이벤트
-
-                character.setImageResource(cha_res[i])  // 클릭한 이미지로 현재 캐릭터 이미지뷰 리소스 변경
+                if(img_view[i].getTag() == "unlock")
+                    character.setImageResource(cha_res[i])  // 클릭한 이미지로 현재 캐릭터 이미지뷰 리소스 변경
             }
         }
 
+        // finalScore가 일정 점수 이상이면 캐릭터 오픈
         when(finalScore){
-            in 0..100 -> img_view[index].setImageResource(img_res[index++])
-            in 101..200 -> img_view[index].setImageResource(img_res[index++])
-            in 201..300 -> img_view[index].setImageResource(img_res[index++])
-            in 301..400 -> img_view[index].setImageResource(img_res[index++])
-            in 401..500 -> img_view[index].setImageResource(img_res[index++])
-
-
-
+            in 0..100 -> {
+                img_view[index].setImageResource(img_res[index])    // 캐릭터 오픈 이미지로 변경
+                img_view[index++].setTag("unlock")                  // 태그 unlock으로 설정
+            }
+            in 101..200 -> {
+                img_view[index].setImageResource(img_res[index])
+                img_view[index++].setTag("unlock")
+            }
+            in 201..300 -> {
+                img_view[index].setImageResource(img_res[index])
+                img_view[index++].setTag("unlock")
+            }
+            in 301..400 -> {
+                img_view[index].setImageResource(img_res[index])
+                img_view[index++].setTag("unlock")
+            }
+            in 401..500 -> {
+                img_view[index].setImageResource(img_res[index])
+                img_view[index++].setTag("unlock")
+            }
+            in 501..600 -> {
+                img_view[index].setImageResource(img_res[index])
+                img_view[index++].setTag("unlock")
+            }
+            in 601..700 -> {
+                img_view[index].setImageResource(img_res[index])
+                img_view[index++].setTag("unlock")
+            }
+            in 701..800 -> {
+                img_view[index].setImageResource(img_res[index])
+                img_view[index++].setTag("unlock")
+            }
+            in 801..900 -> {
+                img_view[index].setImageResource(img_res[index])
+                img_view[index++].setTag("unlock")
+            }
+            in 901..1000 -> {
+                img_view[index].setImageResource(img_res[index])
+                img_view[index++].setTag("unlock")
+            }
+            in 1001..1100 -> {
+                img_view[index].setImageResource(img_res[index])
+                img_view[index++].setTag("unlock")
+            }
+            in 1101..1200 -> {
+                img_view[index].setImageResource(img_res[index])
+                img_view[index++].setTag("unlock")
+            }
+            else -> img_view[index].setTag("unlock")
         }
 
 
