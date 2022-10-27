@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mole_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/mole_score"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:text="Score : 0"
+                android:textColor="@color/black"
+                android:textSize="30dp" />
+
+            <TextView
+                android:id="@+id/mole_timer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1.5"
+                android:text="Timer : 30"
+                android:textColor="#FF0000"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/mole_bestScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Best Score : 0"
+                android:textColor="@color/black"
+                android:textSize="30dp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/mole_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="start"
+                android:textStyle="bold"
+                android:background="@color/white"
+                android:layout_marginRight="10dp"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/mole1"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/mole_rat" />
+
+                <ImageView
+                    android:id="@+id/mole2"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/mole_rat" />
+
+                <ImageView
+                    android:id="@+id/mole3"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/mole_rat" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/mole4"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/mole_rat" />
+
+                <ImageView
+                    android:id="@+id/mole5"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/mole_rat" />
+
+                <ImageView
+                    android:id="@+id/mole6"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/mole_rat" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/mole7"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/mole_rat" />
+
+                <ImageView
+                    android:id="@+id/mole8"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/mole_rat" />
+
+                <ImageView
+                    android:id="@+id/mole9"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/mole_rat" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
