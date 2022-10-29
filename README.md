@@ -22,6 +22,8 @@
 2. 시작화면, 캐릭터 선택 화면, 게임 선택 화면 코틀린으로 코딩<br></br>
 3. 두더지 잡기 게임 구현중<br>
 <img width="235" alt="image" src="https://user-images.githubusercontent.com/80818640/198750533-9364f9a2-373b-4d90-9374-4a8a4e38b4bf.png">
+4. 업다운 게임 구현중<br>
+5. <img width="235" alt="image" src="C:\Users\Park\Desktop">
 
 ---
 * TO-DO
