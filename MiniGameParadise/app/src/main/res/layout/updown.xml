@@ -20,13 +20,23 @@
         android:layout_height="wrap_content"
 
 
-        android:text="남은기회:5"
+        android:text="남은기회:"
         android:textSize="30dp"
         android:textColor="@color/white"
 
         />
 
-    <TextView
+        <TextView
+            android:id="@+id/lifecnt"
+            android:layout_width="39dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:textSize="30dp"
+            android:text=""
+
+            ></TextView>
+
+        <TextView
         android:id="@+id/result_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -50,7 +60,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="숫자를 입력하세요!"
+        android:hint="숫자를 입력하세요!"
         android:textColor="@color/white"
 
 

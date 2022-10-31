@@ -19,9 +19,7 @@
         <activity
             android:name=".MoleActivity"
             android:exported="false" />
-        <activity
-            android:name=".moleActivity"
-            android:exported="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -35,7 +33,6 @@
         <activity android:name=".GameChoice" />
         <activity android:name=".baseballGame" />
         <activity android:name=".cardGame" />
-        <activity android:name=".moleGame" />
         <activity android:name=".randomGame" />
         <activity android:name=".updownGame" />
     </application>
