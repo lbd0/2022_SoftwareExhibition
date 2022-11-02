@@ -18,7 +18,7 @@ class GameChoice : AppCompatActivity(){
         var updownBtn : Button= findViewById(R.id.updownbtn)
         var randomBtn : Button = findViewById(R.id.randombtn)
 
-        moleBtn.setOnClickListener{ //여기 에러나여..
+        moleBtn.setOnClickListener{
              var intent : Intent=Intent(this,MoleActivity::class.java)
              startActivity(intent)
         }

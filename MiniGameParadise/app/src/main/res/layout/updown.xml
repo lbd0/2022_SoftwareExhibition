@@ -5,12 +5,51 @@
     android:background="#DD24B2F3"
     >
 
+    <TextView
+        android:id="@+id/sco_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="현재점수:"
+        android:textSize="30dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/white"
+        ></TextView>
+
+    <TextView
+        android:id="@+id/scor_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="140dp"
+        android:text=""
+        android:textSize="30dp"
+
+        ></TextView>
+
+    <TextView
+        android:id="@+id/high_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="최고점수: "
+        android:textSize="30dp"
+        android:layout_marginLeft="230dp"
+        android:textColor="@color/white"
+        ></TextView>
+    <TextView
+        android:id="@+id/highScore_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:layout_marginLeft="360dp"
+        android:text=""
+        ></TextView>
+
 
     <LinearLayout
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="37dp"
         android:layout_marginLeft="10dp"
         >
 
@@ -37,22 +76,21 @@
             ></TextView>
 
         <TextView
-        android:id="@+id/result_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+            android:id="@+id/result_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
-        android:layout_marginLeft="160dp"
+            android:layout_marginLeft="90dp"
 
-        android:text="결과: "
+            android:text="결과: "
 
-        android:textSize="30dp"
-        android:textColor="@color/white"
+            android:textColor="@color/white"
+            android:textSize="30dp"
 
 
+            ></TextView>
 
-        ></TextView>
-
-        </LinearLayout>
+    </LinearLayout>
 
 
     <EditText
@@ -60,7 +98,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:hint="숫자를 입력하세요!"
+        android:hint="100까지 숫자입력!"
         android:textColor="@color/white"
 
 
@@ -87,7 +125,7 @@
             android:id="@+id/r_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="최기화"
+            android:text="다시하기"
 
             ></Button>
 

@@ -9,11 +9,16 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import org.w3c.dom.Text
 
 class updownGame : AppCompatActivity() {
 
     var ranNum: Int = makeNum();
-    var lifec: Int=5;
+    var lifec: Int=7;
+    var highscore:Int=0
+    var score: Int = 0
+    var ispass :Boolean=false
+
 
 
 
@@ -26,6 +31,8 @@ class updownGame : AppCompatActivity() {
         var editText: EditText = findViewById(R.id.input_text)
         var result: TextView = findViewById(R.id.result_txt)
         var lifecnt : TextView = findViewById(R.id.lifecnt)
+        var scoreText : TextView = findViewById(R.id.scor_txt)
+        var hiText : TextView = findViewById(R.id.highScore_txt)
 
 
         var life: TextView = findViewById(R.id.life_txt)
@@ -38,6 +45,10 @@ class updownGame : AppCompatActivity() {
             var userInt: Int = user.toInt()
             if (userInt == ranNum) {
                 result.setText("정답")
+                ++score
+                scoreText.setText(""+score)
+                ispass=true
+
             }
             else if(userInt > ranNum){
                 result.setText("DOWN")
@@ -58,7 +69,21 @@ class updownGame : AppCompatActivity() {
             if(lifec<=0){
                 checkButton.isEnabled=false
                 result.setText("실패")
+            }
 
+
+            if(ispass==true){
+                lifec=7
+                lifecnt.setText(""+lifec)
+                result.setText("")
+                checkButton.isEnabled=true
+                ispass=false
+            }
+
+
+            if(highscore<score){
+                highscore=score
+                hiText.setText(""+highscore)
 
             }
 
@@ -73,9 +98,21 @@ class updownGame : AppCompatActivity() {
             checkButton.isEnabled=true
 
 
-
-
         }
+
+
+//        hiText.setText(highscore)
+
+
+
+
+
+
+
+
+
+
+
 
 
     }
@@ -86,26 +123,10 @@ class updownGame : AppCompatActivity() {
         var r= random.nextInt(100)
 
         return r
-
-
     }
 
 
 
 
-    fun compare() {  //랜덤 숫자와 사용자 입력 숫자를 비교
-//
-//        var user: String = editText.text.toString()
-//
-//        var userInt: Int = user.toInt()
-//
-//        if (userInt == ranNum) {
-//            result.setText("정답")
-//
-//        }
-//
-//
-//    }
-//
-    }
+
 }
