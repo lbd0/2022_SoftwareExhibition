@@ -25,6 +25,7 @@ class MoleResultActivity : AppCompatActivity() {
 
         val score = getIntent().getIntExtra("score", -1)    // 점수
 
+
         if(spf?.getInt("spfScore", 0)!! < score) { // 최고 점수가 이번 점수보다 낮으면
             spf?.edit()!!.putInt("spfScore", score).commit()  // 이번 점수를 최고 점수로 변경
             result.setText("New Best\n$score")
