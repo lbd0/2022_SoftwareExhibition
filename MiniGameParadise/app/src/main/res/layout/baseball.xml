@@ -1,10 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#C6AF14"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="현재기록"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+
+        ></TextView>
+
+    <TextView
+        android:id="@+id/now_txt"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="150dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="30dp"
+        android:textColor="@color/white"
+        ></TextView>
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="최고기록"
+        android:textSize="30dp"
+        android:textColor="@color/white"
+        android:layout_marginLeft="240dp"
+        >
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/high_txt"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:layout_marginLeft="360dp"
+        ></TextView>
+
+    <TextView
+        android:textColor="@color/white"
+        android:layout_marginTop="62dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="남은시간"
+        android:textSize="30dp"
+        ></TextView>
+    <TextView
+        android:id="@+id/time_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        >
+
+    </TextView>
+
+
+
+    <Button
+        android:id="@+id/start_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="230dp"
+        android:text="시작"
+        android:textSize="30dp"
+
+        ></Button>
+
+    <Button
+        android:id="@+id/plus_btn"
+        android:layout_width="132dp"
+        android:layout_height="153dp"
+        android:layout_gravity="center"
+        android:background="@drawable/ani_chi"
+
+        ></Button>
 
 
 
@@ -16,4 +108,6 @@
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

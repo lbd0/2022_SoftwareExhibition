@@ -100,21 +100,6 @@ class updownGame : AppCompatActivity() {
 
         }
 
-
-//        hiText.setText(highscore)
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
 
@@ -124,9 +109,5 @@ class updownGame : AppCompatActivity() {
 
         return r
     }
-
-
-
-
 
 }
