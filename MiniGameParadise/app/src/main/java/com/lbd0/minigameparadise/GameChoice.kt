@@ -24,7 +24,7 @@ class GameChoice : AppCompatActivity(){
         }
 
         cardBtn.setOnClickListener{
-            var intent : Intent= Intent(this,cardGame::class.java)
+            var intent : Intent= Intent(this,CardActivity::class.java)
             startActivity(intent)
         }
         baseBtn.setOnClickListener{

@@ -79,7 +79,7 @@ class MoleActivity : AppCompatActivity() {
             }
         }
 
-        txt_timer.setText("Timer 30 sec")
+        txt_timer.setText("Timer : 30 sec")
 
         btn_start.setOnClickListener {
             btn_start.visibility = View.GONE
@@ -158,7 +158,7 @@ class MoleActivity : AppCompatActivity() {
 
     val handler = object:Handler() {
         override fun handleMessage(msg: Message) {
-            txt_timer.setText("Timer ${msg.arg1} sec")
+            txt_timer.setText("Timer : ${msg.arg1} sec")
         }
     }
 

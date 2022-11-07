@@ -1,11 +1,11 @@
 package com.lbd0.minigameparadise
 
-import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
 
-class cardGame : AppCompatActivity() {
+class CardActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.card)
+        setContentView(R.layout.activity_card)
     }
 }

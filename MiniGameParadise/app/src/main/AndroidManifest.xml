@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.lbd0.minigameparadise">
+    package="com.lbd0.minigameparadise" >
 
     <application
         android:allowBackup="true"
@@ -12,17 +12,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MiniGameParadise"
-        tools:targetApi="31">
+        tools:targetApi="31" >
+        <activity
+            android:name=".CardActivity"
+            android:exported="false" >
+        </activity>
         <activity
             android:name=".MoleResultActivity"
             android:exported="false" />
         <activity
             android:name=".MoleActivity"
             android:exported="false" />
-
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,7 +35,6 @@
         <activity android:name=".CharacterChoice" />
         <activity android:name=".GameChoice" />
         <activity android:name=".baseballGame" />
-        <activity android:name=".cardGame" />
         <activity android:name=".randomGame" />
         <activity android:name=".updownGame" />
     </application>

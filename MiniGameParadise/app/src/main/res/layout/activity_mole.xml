@@ -17,26 +17,26 @@
 
             <TextView
                 android:id="@+id/mole_score"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                android:layout_weight="1"
                 android:text="Score : 0"
                 android:textColor="@color/black"
-                android:textSize="25dp" />
+                android:textSize="25dp"
+                android:layout_weight="0.5"/>
 
             <TextView
-                android:id="@+id/mole_timer"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
+                android:id="@+id/mole_bestScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
-                android:layout_weight="1.3"
-                android:text="Timer : 30"
-                android:textColor="#FF0000"
+                android:layout_marginTop="10dp"
+                android:text="Best Score : 0"
+                android:textColor="@color/black"
                 android:textSize="25dp"
-                android:textStyle="bold" />
+                android:layout_weight="0.5"/>
+
         </LinearLayout>
 
         <LinearLayout
@@ -45,15 +45,15 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/mole_bestScore"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:text="Best Score : 0"
-                android:textColor="@color/black"
+                android:id="@+id/mole_timer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.3"
+                android:text="Timer : 30 sec"
+                android:textColor="#5C0101"
                 android:textSize="25dp"
-                android:layout_weight="1"/>
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"/>
 
             <Button
                 android:id="@+id/mole_start"
