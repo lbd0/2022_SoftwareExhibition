@@ -90,7 +90,6 @@ class updownGame : AppCompatActivity() {
 
         }
 
-
         resetButton.setOnClickListener {
             lifec=5
             lifecnt.setText(""+lifec)
@@ -101,7 +100,6 @@ class updownGame : AppCompatActivity() {
         }
 
     }
-
 
     fun makeNum() : Int {
         val random = Random()
