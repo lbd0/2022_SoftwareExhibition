@@ -13,71 +13,44 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/now_txt"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="현재기록"
-        android:textColor="@color/white"
-        android:textSize="30dp"
+        android:text="Score : 0"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+
 
         ></TextView>
-
-    <TextView
-        android:id="@+id/now_txt"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="150dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="30dp"
-        android:textColor="@color/white"
-        ></TextView>
-    <TextView
-        android:layout_marginTop="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="최고기록"
-        android:textSize="30dp"
-        android:textColor="@color/white"
-        android:layout_marginLeft="240dp"
-        >
-
-    </TextView>
 
     <TextView
         android:id="@+id/high_txt"
         android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
-        android:textColor="@color/white"
-        android:textSize="30dp"
-        android:layout_marginLeft="360dp"
-        ></TextView>
-
-    <TextView
-        android:textColor="@color/white"
-        android:layout_marginTop="62dp"
-        android:layout_marginLeft="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="남은시간"
-        android:textSize="30dp"
-        ></TextView>
-    <TextView
-        android:id="@+id/time_txt"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="60dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textColor="@color/white"
-        android:textSize="30dp"
+        android:text="Best Score : 0"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:layout_marginLeft="180dp"
         >
 
     </TextView>
 
+
+    <TextView
+        android:id="@+id/time_txt"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Timer: 5 sec"
+        android:textColor="#5C0101"
+        android:textSize="25dp"
+        android:textStyle="bold"
+
+        ></TextView>
 
 
     <Button
@@ -99,14 +72,6 @@
         android:background="@drawable/ani_chi"
 
         ></Button>
-
-
-
-
-
-
-
-
 
 
 

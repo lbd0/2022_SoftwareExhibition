@@ -35,8 +35,8 @@ class updownGame : AppCompatActivity() {
         var hiText : TextView = findViewById(R.id.highScore_txt)
 
 
-        var life: TextView = findViewById(R.id.life_txt)
-//        var ranNum: Int? = null
+        var life: TextView = findViewById(R.id.lifecnt)
+
 
 
         checkButton.setOnClickListener {
@@ -44,38 +44,38 @@ class updownGame : AppCompatActivity() {
             var user: String = editText.text.toString() //정답 비교
             var userInt: Int = user.toInt()
             if (userInt == ranNum) {
-                result.setText("정답")
+                result.setText("result : 정답")
                 ++score
-                scoreText.setText(""+score)
+                scoreText.setText("score : "+score)
                 ispass=true
 
             }
             else if(userInt > ranNum){
-                result.setText("DOWN")
+                result.setText("result : DOWN")
             }
 
             else if(userInt < ranNum){
-                result.setText("UP")
+                result.setText("result : UP")
             }
 
             else{
-                result.setText("오답")
+                result.setText("result : 오답")
             }
 
             lifec=lifec-1
 
-            lifecnt.setText(""+lifec)
+            lifecnt.setText("life : "+lifec)
 
             if(lifec<=0){
                 checkButton.isEnabled=false
-                result.setText("실패")
+                result.setText("result : 실패")
             }
 
 
             if(ispass==true){
                 lifec=7
-                lifecnt.setText(""+lifec)
-                result.setText("")
+                lifecnt.setText("life : "+lifec)
+                result.setText("result : ")
                 checkButton.isEnabled=true
                 ispass=false
             }
@@ -83,7 +83,7 @@ class updownGame : AppCompatActivity() {
 
             if(highscore<score){
                 highscore=score
-                hiText.setText(""+highscore)
+                hiText.setText("Best Score : "+highscore)
 
             }
 

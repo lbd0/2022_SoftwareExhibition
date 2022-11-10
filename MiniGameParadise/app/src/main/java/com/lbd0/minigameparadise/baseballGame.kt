@@ -2,6 +2,7 @@ package com.lbd0.minigameparadise
 
 import android.content.Intent
 import android.content.SharedPreferences
+import android.hardware.HardwareBuffer
 import android.media.TimedText
 import android.os.Bundle
 import android.os.Handler
@@ -16,6 +17,7 @@ import kotlin.concurrent.timer
 
 import java.util.*
 import kotlin.concurrent.thread
+import kotlin.math.log
 
 class baseballGame : AppCompatActivity() {
 
@@ -50,10 +52,15 @@ class baseballGame : AppCompatActivity() {
 
         start.setOnClickListener{
 
+
+
+
             plus.isEnabled=true;
             start.isEnabled=false;
 
             thread(start1){
+                Log.d("jun","aq")
+
                 while(time>=0){
                     var mes=Message()
 
@@ -73,62 +80,66 @@ class baseballGame : AppCompatActivity() {
                     val msg = Message()
                     msg.arg1 = num
                     besthanedler.sendMessage(msg)
+
+
+                    val mew = Message()
+                    mew.arg1=1
+                    endHandler.sendMessage(mew)
+
+                    val mmm = Message()
+                    mmm.arg1=1
+                    restartHandler.sendMessage(mmm)
                 }
+
+
+
             }
         }
 
         plus.setOnClickListener{
             ++num
-            score.setText(""+num)
-            if(time==0){
-                plus.isEnabled=false
+            score.setText("Score : "+num)
 
-
-            }
 
         }
 
+    }
+
+    val endHandler : Handler= object  : Handler(){
+        override fun handleMessage(msg: Message) {
+            plus.isEnabled=false
+        }
     }
 
     val haneler: Handler= object  : Handler(){
         override fun handleMessage(msg: Message) {
-            timetxt.setText(""+msg.arg1)
+            timetxt.setText("Timer: "+msg.arg1+" sec")
         }
-    }
-
-    fun reset(){
-        num=0
-        time=5
-        timetxt.setText(""+5)
-        score.setText(""+num)
-        plus.isEnabled=false
-    }
-
-    fun compare(h:Int):Int {
-
-        if(highnum<h){
-            highnum=h
-        }
-
-        return highnum
     }
 
     val besthanedler : Handler = object : Handler() {
         override fun handleMessage(msg: Message) {
-          /*  if(spf?.getInt("ball", 0) == null)  {
-                spf?.edit()?.putInt("ball", msg.arg1)?.commit()
-                Log.d("bada", "null ${spf?.getInt("ball", 0)}")
-            }
-            else {*/
                 if(spf?.getInt("ball", 0)!! < msg.arg1) { // 최고 점수가 이번 점수보다 낮으면
                     spf?.edit()?.putInt("ball", msg.arg1)?.commit()  // 이번 점수를 최고 점수로 변경
                     high.setText("New Best: ${msg.arg1}")
                     Log.d("bada", "if ${spf?.getInt("ball", 0)}")
                 } else {
-                    high.setText("Best Score\n${spf?.getInt("ball", 0) ?: 0}")
+                    high.setText("Best Score : ${spf?.getInt("ball", 0) ?: 0}")
                     Log.d("bada", "else ${spf?.getInt("ball", 0)}")
                 }
 
+        }
+    }
+
+    val restartHandler : Handler = object  : Handler(){
+        override fun handleMessage(msg: Message) {
+            num=0
+            time=5
+            timetxt.setText("Timer: "+5+" sec")
+            score.setText("Score : 0")
+            plus.isEnabled=false
+            start.isEnabled=true
+            start1=true
         }
     }
 
