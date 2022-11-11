@@ -54,13 +54,10 @@ class MoleActivity : AppCompatActivity() {
 
         for(i in 0 until moles.size) {
             moles[i].visibility = View.INVISIBLE
-
             moles[i].setOnClickListener {
-
                 if(it.getTag().toString().equals(TAG_MOLE)) {
                     txt_score.setText("Score : ${++score}")
                     it.visibility = View.INVISIBLE
-                    Log.d("babd", "${moles[i].getTag()}")
                 } else if(it.getTag().toString().equals(TAG_BU)){
                     if(score <= 0) {
                         txt_score.setText("Score : $score")
@@ -68,9 +65,7 @@ class MoleActivity : AppCompatActivity() {
                         txt_score.setText("Score : ${--score}")
                     }
                     it.visibility = View.INVISIBLE
-                    Log.d("babd", "${moles[i].getTag()}")
                 } else {
-                    Log.d("babd", "${moles[i].getTag()}")
                     val toast = Toast.makeText(applicationContext, "late!", Toast.LENGTH_SHORT)
                     toast.show()
                     Thread.sleep(500)
@@ -83,7 +78,6 @@ class MoleActivity : AppCompatActivity() {
 
         btn_start.setOnClickListener {
             btn_start.visibility = View.GONE
-            txt_score.visibility = View.VISIBLE
             var start:Boolean = true
             thread(start) {
                 val MAXTIME:Int = 30
@@ -107,8 +101,6 @@ class MoleActivity : AppCompatActivity() {
             }
 
             for(i in 0 until moles.size) {
-
-
                 thread(start) {
                     while(true) {
                         try {

@@ -18,7 +18,7 @@ class CardResultActivity : AppCompatActivity() {
         val binding = ActivityCardResultBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        spf = getSharedPreferences("spfScore", MODE_PRIVATE)    // 키 값이 또 있으면 덮어씀
+        spf = getSharedPreferences("cardSpf", MODE_PRIVATE)    // 키 값이 또 있으면 덮어씀
 
         val result = binding.cardResult
         val retry = binding.cardRetrybtn
@@ -27,11 +27,11 @@ class CardResultActivity : AppCompatActivity() {
         val score = getIntent().getIntExtra("score", -1)    // 점수
 
 
-        if(spf?.getInt("spfScore", 0)!! < score) { // 최고 점수가 이번 점수보다 낮으면
+        if(spf?.getInt("cardSpf", 0)!! < score) { // 최고 점수가 이번 점수보다 낮으면
             spf?.edit()!!.putInt("spfScore", score).commit()  // 이번 점수를 최고 점수로 변경
             result.setText("New Best\n$score")
         } else {
-            result.setText("Best Score\n${spf?.getInt("spfScore", 0) ?: 0}")
+            result.setText("Best Score\n${spf?.getInt("cardSpf", 0) ?: 0}")
         }
 
         retry.setOnClickListener {
