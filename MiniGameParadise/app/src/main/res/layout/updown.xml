@@ -6,42 +6,31 @@
     >
 
     <TextView
-        android:id="@+id/sco_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="현재점수:"
-        android:textSize="30dp"
-        android:layout_marginLeft="10dp"
-        android:textColor="@color/white"
-        ></TextView>
-
-    <TextView
         android:id="@+id/scor_txt"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="140dp"
-        android:text=""
-        android:textSize="30dp"
-
-        ></TextView>
-
-    <TextView
-        android:id="@+id/high_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="최고점수: "
-        android:textSize="30dp"
-        android:layout_marginLeft="230dp"
+        android:text="Score : 0"
         android:textColor="@color/white"
+        android:textSize="25dp"
+
+
         ></TextView>
+
+
+
     <TextView
         android:id="@+id/highScore_txt"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="180dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30dp"
-        android:layout_marginLeft="360dp"
-        android:text=""
+        android:text="Best Score : 0"
+        android:textColor="@color/white"
+        android:textSize="25dp"
         ></TextView>
+
 
 
     <LinearLayout
@@ -54,43 +43,37 @@
         >
 
     <TextView
-        android:id="@+id/life_txt"
+        android:id="@+id/lifecnt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-
-        android:text="남은기회:"
-        android:textSize="30dp"
+        android:text="life : 5"
         android:textColor="@color/white"
+        android:textSize="25dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginLeft="10dp"
+
 
         />
-
-        <TextView
-            android:id="@+id/lifecnt"
-            android:layout_width="39dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:textSize="30dp"
-            android:text=""
-
-            ></TextView>
 
         <TextView
             android:id="@+id/result_txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
 
             android:layout_marginLeft="90dp"
 
-            android:text="결과: "
+            android:text="result : "
 
             android:textColor="@color/white"
-            android:textSize="30dp"
+            android:textSize="25dp"
 
 
             ></TextView>
 
+
     </LinearLayout>
+
 
 
     <EditText
