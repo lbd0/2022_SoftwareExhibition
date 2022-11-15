@@ -5,6 +5,9 @@
 배경 : https://www.pinterest.co.kr/pin/765752742892604833/
 두더지 게임 : https://www.flaticon.com/free-icon/whack-a-mole_2140181?term=mole&page=1&position=82&page=1&position=82&related_id=2140181&origin=search
 배경 음악 : https://seo6285.tistory.com/212  - 20번
+두더지 잡았을 때 효과음 : https://soundbible.com/85-Cartoon-Hop.html
+부리부리몬 눌렀을 때 효과음 : https://soundbible.com/1005-Frying-Pan-Impact.html
+카드 뒤집을 때 효과음 : https://soundbible.com/1299-Banana-Peel-Slip-Zip.html
 
 <코드>
 https://kutar37.tistory.com/entry/Thread-handler%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%91%90%EB%8D%94%EC%A7%80%EA%B2%8C%EC%9E%84-2
