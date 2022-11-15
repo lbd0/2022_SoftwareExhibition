@@ -3,6 +3,7 @@ package com.lbd0.minigameparadise
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.res.Resources
+import android.media.SoundPool
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -44,7 +45,12 @@ class MoleActivity : AppCompatActivity() {
         val btn_start = binding.moleStart           // 시작 버튼
         txt_timer = binding.moleTimer        // 타이머 텍스트
 
+        val soundPool = SoundPool.Builder().build()
+        var soundId1 = 0
+        var soundId2 = 0
 
+        soundId1 = soundPool.load(this, R.raw.mole_sound, 1)
+        soundId2 = soundPool.load(this, R.raw.buriburi_sound, 1)
         // 최고 점수 표시
         txt_bestScore.setText("Best Score : ${App.prefs.getInt("spfScore", 0)}")
 
@@ -52,9 +58,11 @@ class MoleActivity : AppCompatActivity() {
             moles[i].visibility = View.INVISIBLE
             moles[i].setOnClickListener {
                 if(it.getTag().toString().equals(TAG_MOLE)) {
+                    soundPool.play(soundId1, 1.0f, 1.0f, 0, 0, 1.0f)
                     txt_score.setText("Score : ${++score}")
                     it.visibility = View.INVISIBLE
                 } else if(it.getTag().toString().equals(TAG_BU)){
+                    soundPool.play(soundId2, 1.0f, 1.0f, 1, 0, 1.0f)
                     if(score <= 0) {
                         txt_score.setText("Score : $score")
                     }else {

@@ -1,6 +1,7 @@
 package com.lbd0.minigameparadise
 
 import android.content.Intent
+import android.media.SoundPool
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -76,6 +77,11 @@ class CardActivity : AppCompatActivity() {
         var start = true
         var finish = false
 
+        val soundPool = SoundPool.Builder().build()
+        var soundId1 = 0
+        soundId1 = soundPool.load(this, R.raw.card_sound, 1)
+
+
         txt_score.setText("Score : $score")
         txt_best.setText("Best Score : ${App.prefs.getInt("cardSpf", 0)}")
 
@@ -90,6 +96,7 @@ class CardActivity : AppCompatActivity() {
         for (i in 0 until card.size) {
             card[i].setOnClickListener {
                 if (card[i].getTag().equals(TAG_WRONG)) {
+                    soundPool.play(soundId1, 1.0f, 1.0f, 0, 0, 1.0f)
                     thread(start) {
                         try {
                             if (cnt < 2) {

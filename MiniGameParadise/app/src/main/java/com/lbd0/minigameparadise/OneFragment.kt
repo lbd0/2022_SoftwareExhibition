@@ -20,33 +20,34 @@ class OneFragment : Fragment() {
         val binding = FragmentOneBinding.inflate(inflater, container, false)
 
         val img_view = mutableListOf<ImageView>(binding.cha1, binding.cha2, binding.cha3, binding.cha4, binding.cha5, binding.cha6)
-        val img_res = mutableListOf<Int>(R.drawable.ani_lock_chi, R.drawable.ani_lock_cow, R.drawable.ani_lock_tiger, R.drawable.ani_lock_rabbit, R.drawable.ani_lock_drag, R.drawable.ani_lock_sna)
-
+        val img_res = mutableListOf<Int>(R.drawable.ani_rat2, R.drawable.ani_cow2, R.drawable.ani_tiger2, R.drawable.ani_rabbit2, R.drawable.ani_drag2, R.drawable.ani_sna2)
+        var maxIndex = 0;
         binding.finalScore.setText("Final Score : $finalScore")
-
-        for(i in 0 until img_view.size) {
-            img_view[i].setImageResource(img_res[i])
-        }
 
         when(finalScore) {
             in 0..100 -> {
-                binding.cha1.setImageResource(R.drawable.ani_rat2)
+                maxIndex = 0
             }
             in 101..200 -> {
-                binding.cha2.setImageResource(R.drawable.ani_cow2)
+                maxIndex = 1
             }
             in 201..300 -> {
-                binding.cha3.setImageResource(R.drawable.ani_tiger2)
+                maxIndex = 2
             }
             in 301..400 -> {
-                binding.cha4.setImageResource(R.drawable.ani_rabbit2)
+                maxIndex = 3
             }
             in 401..500 -> {
-                binding.cha5.setImageResource(R.drawable.ani_drag2)
+                maxIndex = 4
             }
             in 501..600 -> {
-                binding.cha6.setImageResource(R.drawable.ani_sna2)
+                maxIndex = 5
             }
+            else -> maxIndex = 5
+        }
+
+        for(i in 0 ..maxIndex) {
+            img_view[i].setImageResource(img_res[i])
         }
 
         // Inflate the layout for this fragment

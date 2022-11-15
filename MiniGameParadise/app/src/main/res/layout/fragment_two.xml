@@ -41,40 +41,46 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="70dp"
-            android:background="#EE736F6F" />
+            android:background="#EE736F6F"
+            android:src="@drawable/ani_lock_hor"/>
 
         <ImageView
             android:id="@+id/cha2"
             android:layout_width="125dp"
             android:layout_height="130dp"
             android:layout_marginRight="10dp"
-            android:background="#EE736F6F" />
+            android:background="#EE736F6F"
+            android:src="@drawable/ani_lock_sheep"/>
 
         <ImageView
             android:id="@+id/cha3"
             android:layout_width="125dp"
             android:layout_height="130dp"
             android:layout_marginRight="5dp"
-            android:background="#EE736F6F" />
+            android:background="#EE736F6F"
+            android:src="@drawable/ani_lock_mon"/>
 
         <ImageView
             android:id="@+id/cha4"
             android:layout_width="125dp"
             android:layout_height="130dp"
             android:layout_marginLeft="5dp"
-            android:background="#EE736F6F" />
+            android:background="#EE736F6F"
+            android:src="@drawable/ani_lock_chi"/>
 
         <ImageView
             android:id="@+id/cha5"
             android:layout_width="125dp"
             android:layout_height="130dp"
-            android:background="#EE736F6F" />
+            android:background="#EE736F6F"
+            android:src="@drawable/ani_lock_dog"/>
 
         <ImageView
             android:id="@+id/cha6"
             android:layout_width="125dp"
             android:layout_height="130dp"
-            android:background="#EE736F6F"/>
+            android:background="#EE736F6F"
+            android:src="@drawable/ani_lock_pig"/>
 
     </GridLayout>
 

@@ -15,6 +15,20 @@
         android:theme="@style/Theme.MiniGameParadise"
         tools:targetApi="31">
         <activity
+            android:name=".BonusResultActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".BonusActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".CharacterBookActivity"
             android:exported="false">
             <meta-data

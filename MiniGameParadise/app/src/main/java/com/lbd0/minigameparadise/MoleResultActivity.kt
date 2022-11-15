@@ -24,6 +24,10 @@ class MoleResultActivity : AppCompatActivity() {
             App.prefs.setInt("spfScore", score) // 이번 점수를 최고 점수로 변경
             result.setText("New Best\n$score")
             OneFragment.finalScore += 50
+            App.prefs.setInt("finalScore", OneFragment.finalScore)
+
+            val intent = Intent(this, BonusActivity::class.java)
+            startActivity(intent)
         } else {
             result.setText("Best Score\n${App.prefs.getInt("spfScore", 0)}")
         }

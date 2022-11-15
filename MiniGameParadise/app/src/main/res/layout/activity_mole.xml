@@ -83,21 +83,24 @@
                     android:layout_width="140dp"
                     android:layout_height="140dp"
                     android:layout_weight="1"
-                    android:src="@drawable/mole_rat" />
+                    android:src="@drawable/mole_rat"
+                    android:soundEffectsEnabled="false"/>
 
                 <ImageView
                     android:id="@+id/mole2"
                     android:layout_width="140dp"
                     android:layout_height="140dp"
                     android:layout_weight="1"
-                    android:src="@drawable/mole_rat" />
+                    android:src="@drawable/mole_rat"
+                    android:soundEffectsEnabled="false"/>
 
                 <ImageView
                     android:id="@+id/mole3"
                     android:layout_width="140dp"
                     android:layout_height="140dp"
                     android:layout_weight="1"
-                    android:src="@drawable/mole_rat" />
+                    android:src="@drawable/mole_rat"
+                    android:soundEffectsEnabled="false"/>
 
             </LinearLayout>
 
@@ -112,21 +115,24 @@
                     android:layout_width="140dp"
                     android:layout_height="140dp"
                     android:layout_weight="1"
-                    android:src="@drawable/mole_rat" />
+                    android:src="@drawable/mole_rat"
+                    android:soundEffectsEnabled="false"/>
 
                 <ImageView
                     android:id="@+id/mole5"
                     android:layout_width="140dp"
                     android:layout_height="140dp"
                     android:layout_weight="1"
-                    android:src="@drawable/mole_rat" />
+                    android:src="@drawable/mole_rat"
+                    android:soundEffectsEnabled="false"/>
 
                 <ImageView
                     android:id="@+id/mole6"
                     android:layout_width="140dp"
                     android:layout_height="140dp"
                     android:layout_weight="1"
-                    android:src="@drawable/mole_rat" />
+                    android:src="@drawable/mole_rat"
+                    android:soundEffectsEnabled="false"/>
 
             </LinearLayout>
 
@@ -141,21 +147,24 @@
                     android:layout_width="140dp"
                     android:layout_height="140dp"
                     android:layout_weight="1"
-                    android:src="@drawable/mole_rat" />
+                    android:src="@drawable/mole_rat"
+                    android:soundEffectsEnabled="false"/>
 
                 <ImageView
                     android:id="@+id/mole8"
                     android:layout_width="140dp"
                     android:layout_height="140dp"
                     android:layout_weight="1"
-                    android:src="@drawable/mole_rat" />
+                    android:src="@drawable/mole_rat"
+                    android:soundEffectsEnabled="false"/>
 
                 <ImageView
                     android:id="@+id/mole9"
                     android:layout_width="140dp"
                     android:layout_height="140dp"
                     android:layout_weight="1"
-                    android:src="@drawable/mole_rat" />
+                    android:src="@drawable/mole_rat"
+                    android:soundEffectsEnabled="false"/>
 
             </LinearLayout>
 

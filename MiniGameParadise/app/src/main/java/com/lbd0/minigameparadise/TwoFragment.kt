@@ -16,36 +16,40 @@ class TwoFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding = FragmentTwoBinding.inflate(inflater, container, false)
-
+        var maxIndex = 0
         val img_view = mutableListOf<ImageView>(binding.cha1, binding.cha2, binding.cha3, binding.cha4, binding.cha5, binding.cha6)
-        val img_res = mutableListOf<Int>(R.drawable.ani_lock_hor, R.drawable.ani_lock_sheep, R.drawable.ani_lock_mon, R.drawable.ani_lock_chi, R.drawable.ani_lock_dog, R.drawable.ani_lock_pig)
+        val img_res = mutableListOf<Int>(R.drawable.ani_hor2, R.drawable.ani_sheep2, R.drawable.ani_mon2, R.drawable.ani_chi2, R.drawable.ani_dog2, R.drawable.ani_pig2)
 
         binding.finalScore.setText("Final Score : ${OneFragment.finalScore}")
 
-        for(i in 0 until img_view.size) {
-            img_view[i].setImageResource(img_res[i])
-        }
-
         when(OneFragment.finalScore) {
             in 601..700 -> {
-                binding.cha1.setImageResource(R.drawable.ani_hor2)
+                maxIndex = 0
             }
             in 701..800 -> {
-                binding.cha2.setImageResource(R.drawable.ani_sheep2)
+                maxIndex = 1
             }
             in 801..900 -> {
-                binding.cha3.setImageResource(R.drawable.ani_mon2)
+                maxIndex = 2
             }
             in 901..1000 -> {
-                binding.cha4.setImageResource(R.drawable.ani_chi2)
+                maxIndex = 3
             }
             in 1001..1100 -> {
-                binding.cha5.setImageResource(R.drawable.ani_dog2)
+                maxIndex = 4
             }
             in 1101..1200 -> {
-                binding.cha6.setImageResource(R.drawable.ani_pig2)
+                maxIndex = 5
+            }
+            else -> maxIndex = 5
+        }
+
+        if(OneFragment.finalScore > 600) {
+            for (i in 0..maxIndex) {
+                img_view[i].setImageResource(img_res[i])
             }
         }
+
         // Inflate the layout for this fragment
         return binding.root
     }
