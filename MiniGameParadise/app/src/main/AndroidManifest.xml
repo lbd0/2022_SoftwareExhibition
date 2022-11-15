@@ -4,6 +4,7 @@
     package="com.lbd0.minigameparadise">
 
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -14,6 +15,13 @@
         android:theme="@style/Theme.MiniGameParadise"
         tools:targetApi="31">
         <activity
+            android:name=".CharacterBookActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".CardResultActivity"
             android:exported="false">
             <meta-data
@@ -22,7 +30,7 @@
         </activity>
         <activity
             android:name=".CardActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".MoleResultActivity"
             android:exported="false" />
@@ -43,7 +51,7 @@
         <activity android:name=".baseballGame" />
         <activity android:name=".randomGame" />
         <activity android:name=".updownGame" />
-        <activity android:name=".clickresult"/>
+        <activity android:name=".clickresult" />
     </application>
 
 </manifest>

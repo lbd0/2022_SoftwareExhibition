@@ -46,11 +46,7 @@ class MoleActivity : AppCompatActivity() {
 
 
         // 최고 점수 표시
-        if(MoleResultActivity.spf == null) {
-            txt_bestScore.setText("Best Score : $score")
-        } else {
-            txt_bestScore.setText("Best Score : ${MoleResultActivity.spf?.getInt("spfScore", 0)}")
-        }
+        txt_bestScore.setText("Best Score : ${App.prefs.getInt("spfScore", 0)}")
 
         for(i in 0 until moles.size) {
             moles[i].visibility = View.INVISIBLE
@@ -95,7 +91,7 @@ class MoleActivity : AppCompatActivity() {
                 }
                 start = false
                 val intent = Intent(this, MoleResultActivity::class.java)
-                intent.putExtra("score", score)
+                intent.putExtra("mole_score", score)
                 startActivity(intent)
                 finish()
             }

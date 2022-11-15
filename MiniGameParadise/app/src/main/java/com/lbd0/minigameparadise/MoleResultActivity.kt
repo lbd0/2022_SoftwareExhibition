@@ -7,9 +7,6 @@ import android.os.Bundle
 import com.lbd0.minigameparadise.databinding.ActivityMoleResultBinding
 
 class MoleResultActivity : AppCompatActivity() {
-    companion object {
-        var spf : SharedPreferences? = null;    // 최고 점수 저장
-    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //setContentView(R.layout.activity_mole_result)
@@ -17,20 +14,18 @@ class MoleResultActivity : AppCompatActivity() {
         val binding = ActivityMoleResultBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        spf = getSharedPreferences("spfScore", MODE_PRIVATE)    // 키 값이 또 있으면 덮어씀
-
         val result = binding.moleResult
         val retry = binding.moleRetrybtn
         val toMain = binding.moleTomainbtn
 
-        val score = getIntent().getIntExtra("score", -1)    // 점수
+        val score = getIntent().getIntExtra("mole_score", -1)    // 점수
 
-
-        if(spf?.getInt("spfScore", 0)!! < score) { // 최고 점수가 이번 점수보다 낮으면
-            spf?.edit()!!.putInt("spfScore", score).commit()  // 이번 점수를 최고 점수로 변경
+        if(App.prefs.getInt("spfScore", 0) < score) { // 최고 점수가 이번 점수보다 낮으면
+            App.prefs.setInt("spfScore", score) // 이번 점수를 최고 점수로 변경
             result.setText("New Best\n$score")
+            OneFragment.finalScore += 50
         } else {
-            result.setText("Best Score\n${spf?.getInt("spfScore", 0) ?: 0}")
+            result.setText("Best Score\n${App.prefs.getInt("spfScore", 0)}")
         }
 
         retry.setOnClickListener {

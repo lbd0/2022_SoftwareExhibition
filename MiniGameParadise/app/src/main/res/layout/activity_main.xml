@@ -26,7 +26,7 @@
         android:id="@+id/selectbnt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="캐릭터 선택"
+        android:text="도감"
         android:textColor="@color/black"
         android:textStyle="bold"
         android:textSize="20dp"
