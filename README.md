@@ -27,8 +27,9 @@
 <img width="235" alt="image" src="https://user-images.githubusercontent.com/80818640/201977259-7f26da17-dc2e-405b-b60d-cc2d88795174.png">
 6. 캐릭터 선택 화면 -> 십이간지 도감으로 변경<br></br>
 <img width="235" alt="image" src="https://user-images.githubusercontent.com/80818640/201978433-fef7a249-7500-4747-bc11-ce8ede15807d.png">
-
-
+7. 보너스 게임 구현 완료<br></br>
+<img width="235" alt="image" src="https://user-images.githubusercontent.com/80818640/201995062-6b3a778e-ebcd-428f-8edd-462842e940e7.png">
+<img width="235" alt="image" src="https://user-images.githubusercontent.com/80818640/201995283-009d37c0-f45e-4a0b-9322-4eda509d962d.png">
 
 
 ---
