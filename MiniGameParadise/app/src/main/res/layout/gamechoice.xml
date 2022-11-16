@@ -102,7 +102,7 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_marginRight="20dp"
-
+                android:background="@drawable/clickgame_img"
 
                 ></Button>
 
@@ -110,7 +110,7 @@
                 android:id="@+id/updownbtn"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-
+                android:background="@drawable/updowngame_img"
                 ></Button>
 
 
