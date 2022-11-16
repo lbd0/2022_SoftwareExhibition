@@ -31,6 +31,9 @@
 <img width="235" alt="image" src="https://user-images.githubusercontent.com/80818640/201995062-6b3a778e-ebcd-428f-8edd-462842e940e7.png">
 <img width="235" alt="image" src="https://user-images.githubusercontent.com/80818640/201995283-009d37c0-f45e-4a0b-9322-4eda509d962d.png">
 
+---
+## 판넬 
+![image](https://user-images.githubusercontent.com/80818640/202173939-f1c5398e-6726-4940-a1d6-c8ffcf19b361.png)
 
 ---
 * TO-DO
