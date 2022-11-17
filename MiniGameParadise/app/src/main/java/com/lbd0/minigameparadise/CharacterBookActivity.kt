@@ -3,6 +3,11 @@ package com.lbd0.minigameparadise
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
+import androidx.fragment.app.FragmentStatePagerAdapter
+import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.google.android.material.tabs.TabLayout
 import com.lbd0.minigameparadise.databinding.ActivityCharacterBookBinding
 
@@ -13,27 +18,16 @@ class CharacterBookActivity : AppCompatActivity() {
         val binding = ActivityCharacterBookBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        supportFragmentManager.beginTransaction().add(R.id.tabContent, OneFragment()).commit()
-
-        val tabLayout = binding.tabs
-
-        tabLayout.addOnTabSelectedListener(object: TabLayout.OnTabSelectedListener {
-            override fun onTabSelected(tab: TabLayout.Tab?) {
-                val transaction = supportFragmentManager.beginTransaction()
-                when(tab?.text) {
-                    "Page1" -> transaction.replace(R.id.tabContent, OneFragment())
-                    "Page2" -> transaction.replace(R.id.tabContent, TwoFragment())
-                }
-                transaction.commit()
-            }
-
-            override fun onTabUnselected(tab: TabLayout.Tab?) {
-                Log.d("bada", "onTabUnselected...")
-            }
-
-            override fun onTabReselected(tab: TabLayout.Tab?) {
-                Log.d("bada", "onTabReselected...")
-            }
-        })
+        binding.viewPager.adapter = MyFragmentPagerViewAdapter(this)
     }
+}
+class MyFragmentPagerViewAdapter(activity: FragmentActivity): FragmentStateAdapter(activity) {
+    val fragments : List<Fragment>
+    init {
+        fragments =  listOf(OneFragment(), TwoFragment())
+    }
+
+    override fun getItemCount(): Int = fragments.size
+
+    override fun createFragment(position: Int): Fragment = fragments[position]
 }
