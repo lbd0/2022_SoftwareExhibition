@@ -68,7 +68,10 @@ class updownGame : AppCompatActivity() {
                 if(spf?.getInt("up", 0)!! < score) { // 최고 점수가 이번 점수보다 낮으면
                     spf?.edit()?.putInt("up",score)?.commit()  // 이번 점수를 최고 점수로 변경
                     hiText.setText("New Best: ${score}")
-
+                    OneFragment.finalScore += 50
+                    App.prefs.setInt("finalScore", OneFragment.finalScore)
+                    val intent = Intent(this, BonusActivity::class.java)
+                    startActivity(intent)
                 } else {
                     hiText.setText("Best Score : ${spf?.getInt("up", 0) ?: 0}")
                 }

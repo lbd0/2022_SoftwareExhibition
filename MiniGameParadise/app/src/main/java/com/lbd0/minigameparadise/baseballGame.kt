@@ -1,5 +1,6 @@
 package com.lbd0.minigameparadise
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.SharedPreferences
 import android.hardware.HardwareBuffer
@@ -103,7 +104,11 @@ class baseballGame : AppCompatActivity() {
 
         }
 
+        intent = Intent(this, BonusActivity::class.java)
     }
+
+
+
 
     val endHandler : Handler= object  : Handler(){
         override fun handleMessage(msg: Message) {
@@ -118,11 +123,15 @@ class baseballGame : AppCompatActivity() {
     }
 
     val besthanedler : Handler = object : Handler() {
+        @SuppressLint("HandlerLeak")
         override fun handleMessage(msg: Message) {
                 if(spf?.getInt("ball", 0)!! < msg.arg1) { // 최고 점수가 이번 점수보다 낮으면
                     spf?.edit()?.putInt("ball", msg.arg1)?.commit()  // 이번 점수를 최고 점수로 변경
                     high.setText("New Best: ${msg.arg1}")
                     Log.d("bada", "if ${spf?.getInt("ball", 0)}")
+                    OneFragment.finalScore += 50
+                    App.prefs.setInt("finalScore", OneFragment.finalScore)
+                    startActivity(intent)
                 } else {
                     high.setText("Best Score : ${spf?.getInt("ball", 0) ?: 0}")
                     Log.d("bada", "else ${spf?.getInt("ball", 0)}")
