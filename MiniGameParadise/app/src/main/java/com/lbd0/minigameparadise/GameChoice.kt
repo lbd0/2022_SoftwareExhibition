@@ -2,9 +2,11 @@ package com.lbd0.minigameparadise
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import kotlin.jvm.internal.Ref
+import kotlin.random.Random
 
 class GameChoice : AppCompatActivity(){
 
@@ -21,11 +23,13 @@ class GameChoice : AppCompatActivity(){
         moleBtn.setOnClickListener{
              var intent : Intent=Intent(this,MoleActivity::class.java)
              startActivity(intent)
+            finish()
         }
 
         cardBtn.setOnClickListener{
             var intent : Intent= Intent(this,CardActivity::class.java)
             startActivity(intent)
+            finish()
         }
         baseBtn.setOnClickListener{
             var intent: Intent = Intent (this, baseballGame::class.java)
@@ -36,8 +40,20 @@ class GameChoice : AppCompatActivity(){
             startActivity(intent)
         }
         randomBtn.setOnClickListener{
-            var intent : Intent = Intent(this, randomGame::class.java)
+            val random = Random
+
+            val gnum = random.nextInt(5) + 1
+            lateinit var intent: Intent
+
+            when (gnum) {
+                1 -> intent = Intent(this, MoleActivity::class.java)
+                2 -> intent = Intent(this, CardActivity::class.java)
+                3 -> intent = Intent(this, baseballGame::class.java)
+                4 -> intent = Intent(this, updownGame::class.java)
+                else -> Log.d("bada", "$gnum")
+            }
             startActivity(intent)
+            finish()
         }
 
 
