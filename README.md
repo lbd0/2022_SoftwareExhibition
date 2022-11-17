@@ -34,6 +34,8 @@
 <img width="235" alt = "image" src="https://user-images.githubusercontent.com/105837745/202512264-75de5853-25d4-4544-a113-bcadff99ec41.png">
 9.클릭 게임 구현 완료<br></br>
 <image width="235" alt ="image" src="https://user-images.githubusercontent.com/105837745/202513007-9c5a885c-59bd-4a38-a1ab-b63b643a7fbc.png">
+  
+  효과음 사용 링크</br> https://youtubelab.tistory.com/2
 
 
 ---
