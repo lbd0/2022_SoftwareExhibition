@@ -38,7 +38,7 @@
 
 ---
 ## 판넬 
-![image](https://user-images.githubusercontent.com/80818640/202173939-f1c5398e-6726-4940-a1d6-c8ffcf19b361.png)
+![image](https://user-images.githubusercontent.com/105837745/202513527-c72f6f1d-a055-402e-87ad-63a2d6e46ac0.png)
 
 ---
 * TO-DO
