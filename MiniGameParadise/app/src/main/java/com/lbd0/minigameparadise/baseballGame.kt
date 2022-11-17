@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.SharedPreferences
 import android.hardware.HardwareBuffer
+import android.media.SoundPool
 import android.media.TimedText
 import android.os.Bundle
 import android.os.Handler
@@ -46,7 +47,14 @@ class baseballGame : AppCompatActivity() {
         timetxt =findViewById(R.id.time_txt)
         high = findViewById(R.id.high_txt)
 
+        val soundPool = SoundPool.Builder().build()
+        var soundId = 0
+
+        soundId = soundPool.load(this, R.raw.click, 1)
+
         spf = getSharedPreferences("ball", MODE_PRIVATE)
+
+        high.setText("Best Score : ${spf?.getInt("ball", 0) ?: 0}")
 
 
         plus.isEnabled=false;
@@ -98,6 +106,7 @@ class baseballGame : AppCompatActivity() {
         }
 
         plus.setOnClickListener{
+            soundPool.play(soundId, 1.0f, 1.0f, 0, 0, 1.0f)
             ++num
             score.setText("Score : "+num)
 

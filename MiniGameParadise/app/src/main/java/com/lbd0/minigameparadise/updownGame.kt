@@ -4,6 +4,7 @@ import java.util.Random
 
 import android.content.Intent
 import android.content.SharedPreferences
+import android.media.SoundPool
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -38,6 +39,12 @@ class updownGame : AppCompatActivity() {
         var scoreText : TextView = findViewById(R.id.scor_txt)
         var hiText : TextView = findViewById(R.id.highScore_txt)
 
+
+        val soundPool = SoundPool.Builder().build()
+        var soundId = 0
+
+        soundId = soundPool.load(this, R.raw.updown, 1)
+
         spf = getSharedPreferences("upp", MODE_PRIVATE)
 
 
@@ -51,6 +58,7 @@ class updownGame : AppCompatActivity() {
        /// Log.d("ggsd","5")
 
         checkButton.setOnClickListener {
+            soundPool.play(soundId, 1.0f, 1.0f, 0, 0, 1.0f)
 
             var user: String = editText.text.toString() //정답 비교
             var userInt: Int = user.toInt()
@@ -117,6 +125,7 @@ class updownGame : AppCompatActivity() {
 
         resetButton.setOnClickListener {
             lifec=7
+            score=0
             lifecnt.setText("life : "+lifec)
             result.setText("result : ")
             scoreText.setText("socre : "+score)
