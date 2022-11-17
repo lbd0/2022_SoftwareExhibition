@@ -30,6 +30,9 @@
 7. 보너스 게임 구현 완료<br></br>
 <img width="235" alt="image" src="https://user-images.githubusercontent.com/80818640/201995062-6b3a778e-ebcd-428f-8edd-462842e940e7.png">
 <img width="235" alt="image" src="https://user-images.githubusercontent.com/80818640/201995283-009d37c0-f45e-4a0b-9322-4eda509d962d.png">
+8. 업다운 게임 구현 완료<br></br>
+<img width="235" alt = "image" src="https://user-images.githubusercontent.com/105837745/202512264-75de5853-25d4-4544-a113-bcadff99ec41.png">
+
 
 ---
 ## 판넬 
