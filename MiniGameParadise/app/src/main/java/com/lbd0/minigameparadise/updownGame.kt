@@ -38,44 +38,42 @@ class updownGame : AppCompatActivity() {
         var scoreText : TextView = findViewById(R.id.scor_txt)
         var hiText : TextView = findViewById(R.id.highScore_txt)
 
-        spf = getSharedPreferences("up", MODE_PRIVATE)
+        spf = getSharedPreferences("upp", MODE_PRIVATE)
 
 
         var life: TextView = findViewById(R.id.lifecnt)
 
 
-        Log.d("ggsd","${spf}")
 
-        hiText.setText("Best Score : ${spf?.getInt("up", 0) ?: 0}")
+        hiText.setText("Best Score : ${spf?.getInt("upp", 0) ?: 0}")
 
-
-
-
+        Log.d("ggsd","${spf?.getInt("upp", 0) ?: 0}")
+       /// Log.d("ggsd","5")
 
         checkButton.setOnClickListener {
 
             var user: String = editText.text.toString() //정답 비교
             var userInt: Int = user.toInt()
             if (userInt == ranNum) {
+                ispass=true
+                score ++
+                scoreText.setText("score : "+score)
+                Log.d("ggsd","${score}")
                 result.setText("result : 정답")
 
-                scoreText.setText("score : "+score)
-                ispass=true
 
-                checkButton.isEnabled=false
-
-
-                if(spf?.getInt("up", 0)!! < score) { // 최고 점수가 이번 점수보다 낮으면
-                    spf?.edit()?.putInt("up",score)?.commit()  // 이번 점수를 최고 점수로 변경
+                if(spf?.getInt("upp", 0)!! < score) { // 최고 점수가 이번 점수보다 낮으면
+                    spf?.edit()?.putInt("upp",score)?.commit()  // 이번 점수를 최고 점수로 변경
                     hiText.setText("New Best: ${score}")
+
                     OneFragment.finalScore += 50
                     App.prefs.setInt("finalScore", OneFragment.finalScore)
                     val intent = Intent(this, BonusActivity::class.java)
                     startActivity(intent)
                 } else {
-                    hiText.setText("Best Score : ${spf?.getInt("up", 0) ?: 0}")
-                }
+                    hiText.setText("Best Score : ${spf?.getInt("upp", 0) ?: 0}")
 
+                }
 
 
             }
@@ -98,15 +96,17 @@ class updownGame : AppCompatActivity() {
             if(lifec<=0){
                 checkButton.isEnabled=false
                 result.setText("result : 실패")
+                score=0
             }
 
 
             if(ispass==true){
                 lifec=7
                 lifecnt.setText("life : "+lifec)
-                result.setText("result : ")
+                result.setText("result : "+ "정답")
                 checkButton.isEnabled=true
                 ispass=false
+                ranNum=makeNum()
             }
 
 
@@ -119,6 +119,7 @@ class updownGame : AppCompatActivity() {
             lifec=7
             lifecnt.setText("life : "+lifec)
             result.setText("result : ")
+            scoreText.setText("socre : "+score)
             checkButton.isEnabled=true
 
 
