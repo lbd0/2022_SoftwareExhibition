@@ -50,7 +50,7 @@ class updownGame : AppCompatActivity() {
 
         var life: TextView = findViewById(R.id.lifecnt)
 
-
+        editText.setText("")
 
         hiText.setText("Best Score : ${spf?.getInt("upp", 0) ?: 0}")
 
@@ -87,14 +87,17 @@ class updownGame : AppCompatActivity() {
             }
             else if(userInt > ranNum){
                 result.setText("result : DOWN")
+                editText.setText("")
             }
 
             else if(userInt < ranNum){
                 result.setText("result : UP")
+                editText.setText("")
             }
 
             else{
                 result.setText("result : 오답")
+                editText.setText("")
             }
 
             lifec=lifec-1
@@ -105,6 +108,7 @@ class updownGame : AppCompatActivity() {
                 checkButton.isEnabled=false
                 result.setText("result : 실패")
                 score=0
+                editText.setText("")
             }
 
 
@@ -130,6 +134,7 @@ class updownGame : AppCompatActivity() {
             result.setText("result : ")
             scoreText.setText("socre : "+score)
             checkButton.isEnabled=true
+            editText.setText("")
 
 
         }
