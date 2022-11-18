@@ -40,10 +40,6 @@
 
 ---
 ## 판넬 
-![image](https://user-images.githubusercontent.com/105837745/202513527-c72f6f1d-a055-402e-87ad-63a2d6e46ac0.png)
-
----
-* TO-DO
-2. 배경음악넣기 
+<img width="452" alt="image" src="https://user-images.githubusercontent.com/80818640/202697475-eeb8b950-58f0-44ef-a157-c293b3797524.png">
 
 
