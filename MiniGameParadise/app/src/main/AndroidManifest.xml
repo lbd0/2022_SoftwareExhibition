@@ -65,7 +65,6 @@
         <activity android:name=".baseballGame" />
         <activity android:name=".randomGame" />
         <activity android:name=".updownGame" />
-        <activity android:name=".clickresult" />
     </application>
 
 </manifest>
