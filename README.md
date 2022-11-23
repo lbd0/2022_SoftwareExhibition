@@ -4,6 +4,7 @@
 * 팀원 : 라떼 빅데이터 전공 20205175 박준서, 라떼 콘텐츠IT 전공 20205220 이바다
 * 플랫폼 : 안드로이드 스튜디오
 * 사용 언어 : 코틀린
+* 다운로드 링크 : https://drive.google.com/file/d/1tgLvCClFwhgLbGdGHb0I0maGVYGewM2z/view?usp=share_link
 ---
 * 프로젝트 내용 <br>
 두더지 게임, 카드 뒤집기 게임, 버튼 클릭 게임, 숫자 업다운 게임, 보너스 게임으로 구성된 미니게임 모음집 앱<br>
